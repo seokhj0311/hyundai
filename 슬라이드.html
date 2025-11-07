@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .img_wrap{
+            width: 2400px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+        }
+
+        .bg:nth-child(1){
+            width: 800px;
+            height: 600px;
+            background: url(https://i.namu.wiki/i/p_SJj3AEJiPiLem1KmDdLFD4DE5tZAwlT83YBb-Z1MrTQ4dUonkXw8bi7PDzXZQxofwiW0FhVk0F54ICw3LFjA.webp) no-repeat center / cover;
+        }
+
+        .bg:nth-child(2){
+            width: 800px;
+            height: 600px;
+            background: url(https://www.spcmagazine.com/wp-content/uploads/2023/04/%EA%B7%80%EC%97%AC%EC%9B%80-%ED%95%9C%EB%8F%84-%EC%B4%88%EA%B3%BC-%EB%8D%98%ED%82%A8-X-%EC%82%B0%EB%A6%AC%EC%98%A4%EC%BA%90%EB%A6%AD%ED%84%B0%EC%A6%88-%EB%8F%84%EB%84%9B.png) no-repeat center / cover;
+        }
+
+        .bg:nth-child(3){
+            width: 800px;
+            height: 600px;
+            background: url(https://i.namu.wiki/i/IKKK2RMeYxiRr4JwLz5z_Ec9gydx2uZQ_lOlzW_Fv43j52hlwOHVyvHAPKYF6FZmZnAfKZwHcYJVPRzxHABIsg.webp) no-repeat center / cover;
+        }
+
+        .arrow{
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .left_btn{
+            left: 0;
+        }
+
+        .right_btn{
+            right: 0;
+        }
+    
+
+    </style>
+    <script src="../jq.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            var num = 0;
+
+            $('.right_btn').click(function(){
+
+                num++;
+                if(num > 2){
+                    num = 0;
+                }
+
+                $('.img_wrap').stop().animate({
+                    left: -800 * num
+                });
+
+            });
+
+
+            $('.left_btn').click(function(){
+
+                num--;
+                if(num < 0){
+                    num = 2;
+                }
+
+                $('.img_wrap').stop().animate({
+                    left: -800 * num
+                });
+
+            });
+
+            // setInterval(function(){
+            //     num++;
+            //     if(num > 2){
+            //         num = 0;
+            //     }
+
+            //     $('.img_wrap').stop().animate({
+            //         left: -800 * num
+            //     });
+
+            // },1000);
+
+            // * 기능사 시험에 꼭 나오는 문제
+
+            setInterval(function(){
+
+                num--;
+                if(num < 0){
+                    num = 2;
+                }
+
+                $('.img_wrap').stop().animate({
+                    left: -800 * num
+                });
+
+            },1000);
+
+        });
+
+    </script>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <div class="img_wrap">
+            <div class="bg"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+        </div>
+
+        <div class="arrow left_btn">&lt;</div>
+        <div class="arrow right_btn">&gt;</div>
+        <!-- *글자 띄어쓰기 하고싶을 때 &nbsp; 사용 -->
+
+    </div>
+
+</body>
+</html>
