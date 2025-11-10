@@ -30,7 +30,12 @@ $(document).ready(function(){
             slideShadows: false,
         },
     });
-
     // sec_4 event end
+
+    $(".top_btn_wrap").click(function (){
+        $("body, html").stop().animate({
+            scrollTop: 0
+        }, 1000);
+    });
 
 });
