@@ -1,6 +1,6 @@
-section:not(.section_1, .section_2, .section_5){
+/* section:not(.section_1, .section_2, .section_5, .section_6){
     padding: 100px 20px 0;
-}
+} */
 
 h2, h3, p{
     color: #1d1d1d;
