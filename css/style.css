@@ -375,7 +375,6 @@ header{
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-bottom: 17px;
 }
 
 .con_title_6 p{
