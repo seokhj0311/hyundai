@@ -134,14 +134,11 @@ header{
     animation-name: scroll_ani;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-duration: 1.2s;
 }
 
 @keyframes scroll_ani{
-    0%{
-        margin-top: 10px;
-    }
 
     100%{
         margin-top: 25px;
@@ -196,7 +193,7 @@ header{
 }
 
 .con_2:nth-child(1){
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 .con_wrap_2 h3,
