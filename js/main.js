@@ -1,46 +1,151 @@
 $(document).ready(function () {
 
+    menuNum = 0;
 
+    $(".menu_wrap").click(function () {
+        if (menuNum === 0) {
+            $(".tab_menu_wrap, .hamburger").fadeIn(500).addClass("active");
 
-    $(".menu_wrap").click(function () { 
-        $(".tab_menu_wrap").fadeIn(500);
+            $("body").css({
+                width: "100%",
+                position: "fixed",
+            });
+            
+            menuNum++;
+        } else if (menuNum === 1) {
+            $(".tab_menu_wrap").fadeOut(500).removeClass("active");
+            $(".hamburger").removeClass("active");
 
-        $("body").css({
-            width: "100%",
-            position: "fixed",
-        });
+            $("body").css({
+                position: "relative"
+            });
+
+            menuNum--; 
+        }
     });
 
-    $(".close_btn").click(function () { 
-        $(".tab_menu_wrap").fadeOut(500);
+    // $(".close_btn").click(function () { 
+    //     $(".tab_menu_wrap").fadeOut(500);
 
-        $("body").css({
-            position: "relative"
-        });
-    });
+    //     $("body").css({
+    //         position: "relative"
+    //     });
+    // });
+    
+    // $(".menu_wrap").click(function () { 
+    //     $(".tab_menu_wrap").fadeIn(500);
+
+    //     $("body").css({
+    //         width: "100%",
+    //         position: "fixed",
+    //     });
+    // });
+
+    // $(".close_btn").click(function () { 
+    //     $(".tab_menu_wrap").fadeOut(500);
+
+    //     $("body").css({
+    //         position: "relative"
+    //     });
+    // });
 
     // tab_menu_wrap click event end
 
     var click_1 = 'on';
 
-    $(".tab_con, .tab_more_btn").click(function () {
+    // $(".tab_con, .tab_more_con").click(function () {
 
-        if(click_1 == 'on'){
-            $(".tab_sub_con").css({
+    //     if(click_1 == 'on'){
+    //         $(".tab_sub_con").css({
+    //             display: "block"
+    //         });
+
+    //         click_1 = "off"
+
+    //     } else if(click_1 == 'off'){ 
+    //         $(".tab_sub_con").css({
+    //             display: "none"
+    //         });
+
+    //         click_1 = "on"
+    //     }
+    // });
+    // tab_menu event end
+    
+    var tabNum_1 = 0;
+    
+    $(".tab_con_1").click(function () { 
+        console.log("쌤 바보");
+        if (tabNum_1 === 0) {
+            $(".tab_sub_con_1").css({
                 display: "block"
             });
 
-            click_1 = "off"
+            tabNum_1++;
+        } else if (tabNum_1 === 1) { 
+            $(".tab_sub_con_1").css({
+                display: "none"
+            });
+            tabNum_1--;
+        }
+    });
 
-        } else if(click_1 == 'off'){ 
-            $(".tab_sub_con").css({
+    var tabNum_2 = 0;
+    
+    $(".tab_con_2").click(function () { 
+        console.log("은솔이 바보");
+        if (tabNum_2 === 0) {
+            $(".tab_sub_con_2").css({
+                display: "block"
+            });
+
+            tabNum_2++;
+        } else if (tabNum_2 === 1) { 
+            $(".tab_sub_con_2").css({
+                display: "none"
+            });
+            
+            tabNum_2--;
+        }
+    });
+
+    var tabNum_3 = 0;
+    
+    $(".tab_con_3").click(function () { 
+        console.log("승일님 바보");
+        if (tabNum_3 === 0) {
+            $(".tab_sub_con_3").css({
+                display: "block"
+            });
+
+            tabNum_3++;
+        } else if (tabNum_3 === 1) { 
+            $(".tab_sub_con_3").css({
                 display: "none"
             });
 
-            click_1 = "on"
+            tabNum_3--;
         }
     });
-    // tab_menu event end
+
+    var tabNum_4 = 0;
+    
+    $(".tab_con_4").click(function () { 
+        console.log("유정이 바보");
+        if (tabNum_4 === 0) {
+            $("tab_sub_con_4").css({
+                display: "block"
+            });
+
+            tabNum_4++;
+        } else if (tabNum_4 === 1) { 
+            $("tab_sub_con_4").css({
+                display: "none"
+            });
+
+            tabNum_4--;
+        }
+    });
 
     var num = 0;
 

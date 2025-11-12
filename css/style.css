@@ -54,6 +54,54 @@ header{
     cursor: pointer;
 }
 
+.tab_menu_wrap.active{
+    width: 100%;
+    position: fixed;
+}
+
+.menu_wrap .hamburger{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    gap: 4px;
+    align-items: end;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+.hamburger .bar{
+    width: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.bar_1{
+    height: 16px;
+}
+.bar_2{
+    height: 20px;
+}
+.bar_3{
+    height: 12px;
+}
+
+.hamburger.active .bar_1{
+    height: 20px;
+    transform: translateX(7px) rotate(45deg);
+    background-color: #1d1d1d;
+}
+.hamburger.active .bar_2{
+    opacity: 0;
+    background-color: #1d1d1d;
+}
+.hamburger.active .bar_3{
+    height: 20px;
+    transform: translateX(-7px) rotate(-45deg);
+    background-color: #1d1d1d;
+}
+
 .close_icon{
     height: 20px;
     border: 1px solid #1d1d1d;
@@ -72,13 +120,14 @@ header{
 }
 
 .tab_con{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 20px;
     font-size: 20px;
     font-weight: 700;
     color: #1d1d1d;
+}
+
+.tab_menu_con{
+    display: flex;
+    justify-content: space-between;
 }
 
 .tab_sub_con{
@@ -92,10 +141,10 @@ header{
     margin-top: 15px;
 }
 
-.tab_more_btn{
+/* .tab_more_btn{
     position: absolute;
     right: 20px;
-}
+} */
 
 /* header end */
 
