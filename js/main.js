@@ -1,4 +1,46 @@
-$(document).ready(function(){
+$(document).ready(function () {
+
+
+
+    $(".menu_wrap").click(function () { 
+        $(".tab_menu_wrap").fadeIn(500);
+
+        $("body").css({
+            width: "100%",
+            position: "fixed",
+        });
+    });
+
+    $(".close_btn").click(function () { 
+        $(".tab_menu_wrap").fadeOut(500);
+
+        $("body").css({
+            position: "relative"
+        });
+    });
+
+    // tab_menu_wrap click event end
+
+    var click_1 = 'on';
+
+    $(".tab_con, .tab_more_btn").click(function () {
+
+        if(click_1 == 'on'){
+            $(".tab_sub_con").css({
+                display: "block"
+            });
+
+            click_1 = "off"
+
+        } else if(click_1 == 'off'){ 
+            $(".tab_sub_con").css({
+                display: "none"
+            });
+
+            click_1 = "on"
+        }
+    });
+    // tab_menu event end
 
     var num = 0;
 
