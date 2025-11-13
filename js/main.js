@@ -51,7 +51,7 @@ $(document).ready(function () {
 
     // tab_menu_wrap click event end
 
-    var click_1 = 'on';
+    // var click_1 = 'on';
 
     // $(".tab_con, .tab_more_con").click(function () {
 
@@ -72,80 +72,98 @@ $(document).ready(function () {
     // });
     // tab_menu event end
     
-    var tabNum_1 = 0;
+    // var tabNum_1 = 0;
     
-    $(".tab_con_1").click(function () { 
-        console.log("쌤 바보");
-        if (tabNum_1 === 0) {
-            $(".tab_sub_con_1").css({
-                display: "block"
-            });
+    // $(".tab_con_1").click(function () { 
+    //     console.log("컨텐츠1");
+    //     if (tabNum_1 === 0) {
+    //         $(".tab_sub_con_1").css({
+    //             display: "block"
+    //         });
 
-            tabNum_1++;
-        } else if (tabNum_1 === 1) { 
-            $(".tab_sub_con_1").css({
-                display: "none"
-            });
-            tabNum_1--;
-        }
-    });
+    //         tabNum_1++;
+    //     } else if (tabNum_1 === 1) { 
+    //         $(".tab_sub_con_1").css({
+    //             display: "none"
+    //         });
+    //         tabNum_1--;
+    //     }
+    // });
 
-    var tabNum_2 = 0;
+    // var tabNum_2 = 0;
     
-    $(".tab_con_2").click(function () { 
-        console.log("은솔이 바보");
-        if (tabNum_2 === 0) {
-            $(".tab_sub_con_2").css({
-                display: "block"
-            });
+    // $(".tab_con_2").click(function () { 
+    //     console.log("컨텐츠2");
+    //     if (tabNum_2 === 0) {
+    //         $(".tab_sub_con_2").css({
+    //             display: "block"
+    //         });
 
-            tabNum_2++;
-        } else if (tabNum_2 === 1) { 
-            $(".tab_sub_con_2").css({
-                display: "none"
-            });
+    //         tabNum_2++;
+    //     } else if (tabNum_2 === 1) { 
+    //         $(".tab_sub_con_2").css({
+    //             display: "none"
+    //         });
             
-            tabNum_2--;
-        }
-    });
+    //         tabNum_2--;
+    //     }
+    // });
 
-    var tabNum_3 = 0;
+    // var tabNum_3 = 0;
     
-    $(".tab_con_3").click(function () { 
-        console.log("승일님 바보");
-        if (tabNum_3 === 0) {
-            $(".tab_sub_con_3").css({
-                display: "block"
-            });
+    // $(".tab_con_3").click(function () { 
+    //     console.log("컨텐츠3");
+    //     if (tabNum_3 === 0) {
+    //         $(".tab_sub_con_3").css({
+    //             display: "block"
+    //         });
 
-            tabNum_3++;
-        } else if (tabNum_3 === 1) { 
-            $(".tab_sub_con_3").css({
-                display: "none"
-            });
+    //         tabNum_3++;
+    //     } else if (tabNum_3 === 1) { 
+    //         $(".tab_sub_con_3").css({
+    //             display: "none"
+    //         });
 
-            tabNum_3--;
-        }
-    });
+    //         tabNum_3--;
+    //     }
+    // });
 
-    var tabNum_4 = 0;
+    // var tabNum_4 = 0;
     
-    $(".tab_con_4").click(function () { 
-        console.log("유정이 바보");
-        if (tabNum_4 === 0) {
-            $("tab_sub_con_4").css({
-                display: "block"
-            });
+    // $(".tab_con_4").click(function () { 
+    //     console.log("컨텐츠4");
+    //     if (tabNum_4 === 0) {
+    //         $(".tab_sub_con_4").css({
+    //             display: "block"
+    //         });
 
-            tabNum_4++;
-        } else if (tabNum_4 === 1) { 
-            $("tab_sub_con_4").css({
-                display: "none"
-            });
+    //         tabNum_4++;
+    //     } else if (tabNum_4 === 1) { 
+    //         $(".tab_sub_con_4").css({
+    //             display: "none"
+    //         });
 
-            tabNum_4--;
-        }
+    //         tabNum_4--;
+    //     }
+    // });
+    
+    $(".tab_con").each(function (num) {
+        $(this).attr({
+            "data-number": num
+        });
+        
+    }).click(function () { 
+        var clicked = $(this).attr("data-number");
+
+        $(".tab_sub_con").css({
+            display: "none"
+        });
+
+        $(".tab_sub_con").eq(clicked).css({
+            display: "block"
+        });
     });
+    // tab_con event end
 
     var num = 0;
 
@@ -174,7 +192,7 @@ $(document).ready(function () {
             rotate: 0,
             depth: 300,
             // modifier: 1,
-            slideShadows: false,
+            slideShadows: true
         },
     });
     // sec_4 event end

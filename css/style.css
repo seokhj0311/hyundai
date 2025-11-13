@@ -80,9 +80,11 @@ header{
 .bar_1{
     height: 16px;
 }
+
 .bar_2{
     height: 20px;
 }
+
 .bar_3{
     height: 12px;
 }
@@ -92,10 +94,12 @@ header{
     transform: translateX(7px) rotate(45deg);
     background-color: #1d1d1d;
 }
+
 .hamburger.active .bar_2{
     opacity: 0;
     background-color: #1d1d1d;
 }
+
 .hamburger.active .bar_3{
     height: 20px;
     transform: translateX(-7px) rotate(-45deg);
@@ -131,21 +135,19 @@ header{
 }
 
 .tab_sub_con{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #1d1d1d;
     display: none;
+    margin-top: 30px;
 }
 
-.tab_sub_con_1{
-    margin-top: 15px;
+.sub_con_1_1,
+.sub_con_2_2,
+.sub_con_3_3,
+.sub_con_4_4{
+    margin-bottom: 20px;
 }
-
-/* .tab_more_btn{
-    position: absolute;
-    right: 20px;
-} */
-
 /* header end */
 
 .section_1{
@@ -398,7 +400,7 @@ header{
 
 .section_4{
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 0;
 }
 
 .title_4{
