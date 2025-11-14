@@ -248,7 +248,7 @@ header{
     animation-name: scroll_ani;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    /* animation-timing-function: ease-in-out; */
     animation-duration: 1.3s;
 }
 
