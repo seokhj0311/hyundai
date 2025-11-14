@@ -201,7 +201,7 @@ $(document).ready(function () {
             rotate: 0,
             depth: 300,
             // modifier: 1,
-            slideShadows: true
+            slideShadows: false
         },
     });
     // sec_4 event end
