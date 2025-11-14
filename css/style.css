@@ -252,6 +252,10 @@ header{
     animation-duration: 1.3s;
 }
 
+.tab_more_btn{
+    transition: 0.5s;
+}
+
 @keyframes scroll_ani{
 
     0%{

@@ -151,7 +151,7 @@ $(document).ready(function () {
         $(this).attr({
             "data-number": num
         });
-        
+  
     }).click(function () { 
         var clicked = $(this).attr("data-number");
 
@@ -159,9 +159,18 @@ $(document).ready(function () {
             display: "none"
         });
 
-        $(".tab_sub_con").eq(clicked).css({
+        $(".tab_sub_con").eq(clicked).css({ 
             display: "block"
         });
+
+        $(".tab_con").find(".tab_more_btn").css({
+            transform: "rotate(0)"
+        });
+
+        $(".tab_con").eq(clicked).find(".tab_more_btn").css({
+            transform: "rotate(180deg)"
+        });
+
     });
     // tab_con event end
 
